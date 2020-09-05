@@ -1,16 +1,30 @@
 #home_header {
-  background-color: skyblue;
-  width: 100%;
-  margin-top: 0;
+  background-color: #00CCFF;
+  max-width: 480px;
+  height: 80px;
+  margin: 0 auto;
+  .header_title {
+    color: #fff;
+  }
 }
 
 .home_body {
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 480px;
+  background-color: #fff;
+  
   ul {
     list-style: none;
+    padding-left: 0;
+    margin: 0;
+    
     a {
       display: block;
       text-decoration: none;
-      color: #333333;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
     }
     .link_box {
       width: 300px;
@@ -18,10 +32,27 @@
       line-height: 80px;
       text-align: center;
       margin: 40px auto;
-      background-color: #00ECFF;
       
-
+      background-color: #49a9d4;
+      border-radius: 10px;
+      box-shadow:2px 2px #555;
     }
-    
+  }
+}
+
+#home_footer {
+  background-color: #00CCFF;
+  max-width: 480px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
