@@ -5,7 +5,19 @@
   margin: 0 auto;
   .header_title {
     color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    .dumbell-svg {
+      width: 35px;
+      height: 35px;
+      
+    }
+    .title_text {
+      
+    }
   }
+  
 }
 
 .home_body {
@@ -44,13 +56,33 @@
   background-color: #00CCFF;
   max-width: 480px;
   height: 80px;
-  line-height: 80px;
   margin: 0 auto;
+  position: relative;
   ul {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     list-style: none;
     display: flex;
     justify-content: space-around;
+    .footer_link {
+      display: inline-block;
+      text-align: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -o-box;
+      display: -ms-box;
+      display: box;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -o-box-align: center; 
+      -ms-box-align: center;
+      box-align: center;     
+    }
     a {
+      display: inline-block;
       color: #fff;
       text-decoration: none;
     }
