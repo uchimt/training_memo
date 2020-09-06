@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :home, only: [:index]
+
+  resources :training, only: [:index, :new]
   
   root to: 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
