@@ -1,0 +1,29 @@
+<%= form_with(@user) do |f| %>
+  <div class="erro_group">
+    <%= form_error(@user) %>
+  </div>
+
+  <div class="form_group">
+    <%= f.label :nickname, "ニックネーム"%>
+    <%= f.text_field :nickname%>
+  </div>
+
+  <div class="form_group">
+    <%= f.label :email, "メールアドレス" %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="form_group">
+    <%= f.label :password, "パスワード（８文字以上）" %>
+    <%= f.password_field :password %>
+  </div>
+
+   <div class="form_group">
+    <%= f.label :password_confirmation, "パスワード（もう一度ご入力ください）" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="submit_btn">
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>

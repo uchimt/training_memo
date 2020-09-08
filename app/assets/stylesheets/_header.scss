@@ -1,0 +1,22 @@
+header {
+  background-color: #00CCFF;
+  max-width: 480px;
+  height: 80px;
+  margin: 0 auto;
+  .header_title {
+    padding: 5px 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;  
+    .dumbell-svg {
+      width: 35px;
+      height: 35px;
+      fill: #fff;
+    }
+    .title_text {
+      color: #fff;
+      font-weight: bold;
+      font-size: 35px;
+    }
+  }
+}

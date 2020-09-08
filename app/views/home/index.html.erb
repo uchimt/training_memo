@@ -1,9 +1,5 @@
-<header id="home_header">
-  <div class="header_title">    
-    <%= embedded_svg("dumbbell.svg", class: "dumbell-svg")%>
-    <h1 class="title_text">トレ×メモ</h1>
-  </div>
-  <div class=""></div>
+<header>
+  <%= render partial: 'header', locals: { title: "トレ×メモ" } %>
 </header>
 <div class="home_body">
   <ul>
@@ -12,25 +8,6 @@
     <li class="link_box"><%= link_to "カレンダー", "#" %></li>
   </ul>
 </div>
-<footer id="home_footer">
-  <ul class="footer_links">
-    <li class="footer_link">
-      <%= link_to "#" do %>
-        <%= embedded_svg("home.svg", class: "home_link-svg") %><br>
-        ホーム
-      <% end %>
-    </li>
-    <li class="footer_link">
-      <%= link_to "#" do %>
-        <%= embedded_svg("dumbbell.svg", class: "dumbell_link-svg") %><br>
-        記録
-      <% end %>
-    </li>
-    <li class="footer_link">
-      <%= link_to "#" do %>
-        <%= embedded_svg("my_page.svg", class: "my_page_link-svg") %><br>
-        マイページ
-      <% end %>
-    </li>
-  </ul>
+<footer>
+  <%=render partial: 'footer'%>
 </footer>

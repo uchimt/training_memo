@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to root_path
     else
+      flash.now[:danger] = t('.flash.invalid_password')
       render 'new'
     end
   end
@@ -16,4 +17,11 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_path
   end
+
+  private
+
+    def session_params
+      params.require(:session).permit(:email, :password)
+    end
+
 end

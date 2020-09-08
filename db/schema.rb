@@ -10,19 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_03_140114) do
+ActiveRecord::Schema.define(version: 2020_09_07_134828) do
+
+  create_table "sets_trainings", force: :cascade do |t|
+    t.integer "training_id"
+    t.integer "weight_set_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["training_id"], name: "index_sets_trainings_on_training_id"
+    t.index ["weight_set_id"], name: "index_sets_trainings_on_weight_set_id"
+  end
 
   create_table "trainings", force: :cascade do |t|
     t.string "name", null: false
     t.integer "body_part", null: false
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trainings_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "nickname", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
+    t.string "remember_token"
+    t.float "height"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "nickname"
-    t.string "email"
-    t.string "password_digest"
+  create_table "weight_sets", force: :cascade do |t|
+    t.integer "set_number", null: false
+    t.float "weight", null: false
+    t.float "reps", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

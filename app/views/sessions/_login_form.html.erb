@@ -1,0 +1,17 @@
+<h1>ログイン</h1>
+<%= form_with(:session, url: login_path) do |f| %>
+  <div class="form_group">
+    <%= f.label :email, "メールアドレス" %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="form_group">
+    <%= f.label :password, "パスワード（８文字以上）" %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="login_btn">
+    <%= f.submit "ログイン" %>
+  </div>
+
+<% end %>

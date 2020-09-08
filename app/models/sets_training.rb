@@ -1,0 +1,2 @@
+class SetsTraining < ApplicationRecord
+end
